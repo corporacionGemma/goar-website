@@ -39,3 +39,37 @@ body{
   justify-items: center;
   align-items: center;
 }
+.descriptionComponentBlue{
+  color: #00235A;
+  text-shadow: rgb(39, 59, 114) 1px 0px 0px, rgb(39, 59, 114) 0.540302px 0.841471px 0px, rgb(39, 59, 114) -0.416147px 0.909297px 0px, rgb(39, 59, 114) -0.989992px 0.14112px 0px, rgb(39, 59, 114) -0.653644px -0.756802px 0px, rgb(39, 59, 114) 0.283662px -0.958924px 0px, rgb(39, 59, 114) 0.96017px -0.279415px 0px;
+}
+
+.descriptionComponent{
+    color: white;
+    text-shadow: rgb(232, 232, 233) 1px 0px 0px, rgb(232, 232, 233) 0.540302px 0.841471px 0px, rgb(232, 232, 233) -0.416147px 0.909297px 0px, rgb(232, 232, 233) -0.989992px 0.14112px 0px, rgb(232, 232, 233) -0.653644px -0.756802px 0px, rgb(232, 232, 233) 0.283662px -0.958924px 0px, rgb(232, 232, 233) 0.96017px -0.279415px 0px;
+}
+/*banner info*/
+.boxBannerInfo{
+  transition: .3s ease-in-out;
+}
+
+.boxBannerInfo:hover{
+  background: #00235A;
+  box-shadow: -1px -1px 31px -4px rgba(0,35,90,0.95);
+  -webkit-box-shadow: -1px -1px 31px -4px rgba(0,35,90,0.95);
+  -moz-box-shadow: -1px -1px 31px -4px rgba(0,35,90,0.95);
+  border: none;
+}
+.boxBannerInfo:hover .boxChild {
+  border-color: #00235A;
+}
+.boxBannerInfo:hover .lineBanner{
+  background-color: #00235A;
+}
+.boxBannerInfo:hover .boxChild h4, .boxBannerInfo:hover .boxChild h5{
+  color: white;
+}
+.boxBannerInfo:hover .iconBanner{
+  color: white;
+  background: #FF5E14;
+}

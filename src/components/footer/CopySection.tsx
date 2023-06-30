@@ -25,7 +25,7 @@ const CopySection: React.FC = () => {
         <div className='w-[280px] h-full flex border-r-[1px] border-tertiary-borderFooter'>
         {
             socialNetWorks.map(item => (
-                <div key={item.id} className='w-[70px] h-full transition duration-75 hover:bg-primary border-tertiary-borderFooter border-l-[1px]'>
+                <div key={item.id} className='w-[70px] h-full transition-all duration-300 hover:bg-primary border-tertiary-borderFooter border-l-[1px]'>
                   <a href={item.href} target='_blank' rel="noreferrer" className='flex justify-center items-center h-full w-full'>
                   {findIcon(item.id)}
                   </a>
