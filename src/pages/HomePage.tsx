@@ -2,6 +2,7 @@ import React from 'react'
 import TitleComponent from '../components/TitleComponent'
 import servicesList from '../utils/services'
 import BannerInfo from '../components/footer/BannerInfo'
+import BoxTransition from '../components/BoxTransition'
 const HomePage: React.FC = () => {
   return (
     <main className='w-full'>
@@ -19,6 +20,9 @@ const HomePage: React.FC = () => {
             ))
           }
         </div>
+      </div>
+      <div className='my-[40px] flex justify-center'>
+        <BoxTransition/>
       </div>
     </main>
   )
