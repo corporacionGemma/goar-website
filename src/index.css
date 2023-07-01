@@ -6,6 +6,7 @@ body{
   font-family: 'Yantramanav', sans-serif;
   box-sizing: border-box;
   margin: 0;
+  color: #565969;
 }
 .active{ 
   color: #FF5E14 !important;
@@ -13,7 +14,9 @@ body{
 .topLink:hover{
   color: #FF5E14;
 }
-
+.backgroundImg{
+  background-image: url(/assets/icons/default_pattern.png);
+}
 /*navbar*/
 .navContainer{
   width: calc(100% - 500px);
@@ -72,4 +75,18 @@ body{
 .boxBannerInfo:hover .iconBanner{
   color: white;
   background: #FF5E14;
+}
+
+.projecButton{
+  padding: 14px 38px;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  width: 151px;
+  border-radius: 2px;
+}
+
+/*Button*/
+.normal-orange{
+  background-color: #FF5E14;
 }
