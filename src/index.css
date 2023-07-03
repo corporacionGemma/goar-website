@@ -92,10 +92,31 @@ body{
   width: 151px;
   border-radius: 2px;
 }
-
+.projecButton1{
+  color:#FF5E14;
+  font-size: 16px;
+  line-height: 24px;
+  width: 151px;
+  border-radius: 2px;
+  padding: 14px 38px;
+}
+.projecButton1:hover{
+  box-shadow: 1px 15px 17px -1px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 1px 15px 17px -1px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 1px 15px 17px -1px rgba(0, 0, 0, 0.41);
+}
+.projecButton:hover{
+  box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
+  -webkit-box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
+  -moz-box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
+}
 /*Button*/
 .normal-orange{
   background-color: #FF5E14;
+  transition: .3s ease all;
+}
+.normal-white{
+  background-color: white;
   transition: .3s ease all;
 }
 
@@ -103,4 +124,13 @@ body{
   box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
   -webkit-box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
   -moz-box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
+}
+.hover-orange:hover{
+  box-shadow: 1px 10px 20px -1px rgba(255,94,20,0.41);
+  -webkit-box-shadow: 1px 10px 20 -1px rgba(255,94,20,0.41);
+  -moz-box-shadow: 1px 10px 20px -1px rgba(255,94,20,0.41);
+}
+/*PartnerCotinainer*/
+.partnerContainer{
+  background-image: url('/assets/partners_image.jpg')
 }
