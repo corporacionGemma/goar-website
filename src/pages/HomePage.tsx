@@ -21,11 +21,17 @@ const HomePage: React.FC = () => {
 				</div>
 			</div>
 			<div className="flex justify-center">
-				<div className="w-[84%] grid grid-cols-2 gap-6 py-[40px] relative z-[5]">
+				<div className="w-[84%] grid grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
 					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
-					<div className='w-full h-full'>
+					<div className='w-full h-max bg-red-200'>
 						<BoxTransition>
-							<img src="/assets/image1.jpg" width={'800px'} height={'533px'} alt="image1" loading='lazy' decoding='async' className='object-cover h-[533px]'/>
+							<img
+								src="/assets/image1.jpg"
+								width={'600px'} height={'400px'}
+								alt="image1"
+								loading='lazy'
+								decoding='async'
+								className='imageSection'/>
 						</BoxTransition>
 					</div>
 					<div className='px-[26px] py-10'>

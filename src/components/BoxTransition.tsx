@@ -1,15 +1,11 @@
 import React from 'react'
-import { motion, cubicBezier } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 interface Props {
   children?: React.ReactNode
 }
 
 const BoxTransition: React.FC<Props> = ({ children }) => {
-  const easing = cubicBezier(1, -0.16, 0.6, 1.35)
-  const easedProgress = easing(1)
-  console.log('easing:', easing)
-  console.log('easedProgress:', easedProgress)
   const item = {
     hidden: {
       width: 1,
@@ -58,7 +54,7 @@ const BoxTransition: React.FC<Props> = ({ children }) => {
     }
   }
   return (
-    <div className='w-full z-[5] h-full overflow-hidden relative'>
+    <div className='w-full  z-[5] h-max relative'>
       <motion.div
         initial="hidden"
         whileInView="onScreen"
@@ -76,7 +72,7 @@ const BoxTransition: React.FC<Props> = ({ children }) => {
         whileInView="onScreen"
         variants={item2}
         viewport={{ amount: 1, once: true }}
-        className='h-full w-full absolute left-0 top-0 z-[1] bg-red-50'>
+        className=' w-full h-full relative left-0 top-0 z-[1] bg-red-50'>
           {children}
         </motion.div>
     </div>
