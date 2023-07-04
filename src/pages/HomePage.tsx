@@ -10,7 +10,13 @@ import partners from '../utils/partners'
 import PartnerItem from '../components/PartnerItem'
 import people from '../utils/people'
 import PeopleCard from '../components/peopleCard/PeopleCard'
-const HomePage: React.FC = () => {
+import { CarouselProject } from '../components'
+import CarouselHome from '../components/carouselHome.tsx/carouselHome'
+
+interface Props {
+  deviceType: string
+}
+const HomePage: React.FC<Props> = ({ deviceType }) => {
   const partnerRef = useRef<HTMLDivElement>(null)
   const renderFeatureds = useCallback(
     (): React.ReactNode => {
@@ -38,9 +44,12 @@ const HomePage: React.FC = () => {
     },
     []
   )
-  console.log(partnerRef.current?.clientHeight)
   return (
 		<main className="w-full">
+			<div className='w-full'>
+				<CarouselHome/>
+			</div>
+			{/* services */}
 			<div className="w-full flex flex-col items-center">
 				<TitleComponent
 					text="Services"
@@ -87,8 +96,8 @@ const HomePage: React.FC = () => {
 					colorText="text-white"
 					classNameDescription="descriptionComponentBlue"
 				/>
-				<div className='pt-[43px] pb-[116px]'>
-					<></>
+				<div className='pt-[43px] pb-[116px] w-full relative'>
+					<CarouselProject deviceType={deviceType}/>
 				</div>
 			</div>
 			{/***/}

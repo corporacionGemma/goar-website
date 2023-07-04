@@ -100,7 +100,7 @@ body{
   border-radius: 2px;
   padding: 14px 38px;
 }
-.projecButton1:hover{
+.blueProject-button:hover,.orangeProject-button:hover, .projecButton1:hover{
   box-shadow: 1px 15px 17px -1px rgba(0, 0, 0, 0.41);
   -webkit-box-shadow: 1px 15px 17px -1px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 1px 15px 17px -1px rgba(0, 0, 0, 0.41);
@@ -111,8 +111,16 @@ body{
   -moz-box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
 }
 /*Button*/
-.normal-orange{
+.orangeProject-button,.normal-orange{
   background-color: #FF5E14;
+  transition: .3s ease all;
+}
+.normal-blue{
+  background-color: #FF5E14;
+  transition: .3s ease all;
+}
+.blueProject-button{
+  background: #09316F;
   transition: .3s ease all;
 }
 .normal-white{
@@ -120,6 +128,11 @@ body{
   transition: .3s ease all;
 }
 
+.normal-blue:hover{
+  box-shadow: 1px 25px 37px -1px rgba(0,35,90,0.41);
+  -webkit-box-shadow: 1px 25px 37px -1px rgba(0,35,90,0.41);
+  -moz-box-shadow: 1px 25px 37px -1px rgba(0,35,90,0.41);
+}
 .normal-orange:hover{
   box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
   -webkit-box-shadow: 1px 25px 37px -1px rgba(255,94,20,0.41);
@@ -133,4 +146,24 @@ body{
 /*PartnerCotinainer*/
 .partnerContainer{
   background-image: url('/assets/partners_image.jpg')
+}
+/*Carousel Project Item*/
+.carousel-item{
+  padding: 20px 25px 20px 0px;
+}
+.react-multi-carousel-list{
+  position: inherit !important;
+}
+.buttonGroupSection{
+  left: calc(8.5% - 70px);
+}
+
+/* Carousel home */
+.button-carousel-info{
+  color:white;
+  font-size: 16px;
+  line-height: 24px;
+  width: 151px;
+  border-radius: 2px;
+  padding: 14px 38px;
 }

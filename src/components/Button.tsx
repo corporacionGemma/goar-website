@@ -2,7 +2,7 @@ import React from 'react'
 
 interface Props {
   label: string
-  type: string
+  type: 'normal-orange' | 'normal-blue' | 'normal-white'
   styleButton?: string
   cb: () => void
 }
