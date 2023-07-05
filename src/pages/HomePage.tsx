@@ -10,8 +10,9 @@ import partners from '../utils/partners'
 import PartnerItem from '../components/PartnerItem'
 import people from '../utils/people'
 import PeopleCard from '../components/peopleCard/PeopleCard'
-import { CarouselHome, CarouselProject, Counter } from '../components'
+import { CarouselHome, CarouselProject, Counter, StatisticValue } from '../components'
 import valuesProjects from '../utils/valuesProjects'
+import statisticList from '../utils/statisticValues'
 
 interface Props {
   deviceType: string
@@ -175,6 +176,16 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 								name={person.name}
 								src={person.src}
 								ocupation={person.ocupation}/>
+						))
+					}
+				</div>
+			</div>
+			{/* */}
+			<div className='w-full flex mt-[103px] justify-center'>
+				<div className='w-[90%] grid grid-cols-3 gap-[30px]'>
+					{
+						statisticList.map(value => (
+							<StatisticValue key={value.id} end={value.value} title={value.title} subtitle={value.subtitle} description={value.description}/>
 						))
 					}
 				</div>
