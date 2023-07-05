@@ -151,7 +151,7 @@ body{
 .carousel-item{
   padding: 20px 25px 20px 0px;
 }
-.react-multi-carousel-list{
+.carousel-project-container{
   position: inherit !important;
 }
 .buttonGroupSection{

@@ -60,9 +60,7 @@ const CarouselProject: React.FC<Props> = ({ deviceType }) => {
         <Carousel
           swipeable={false}
           draggable={false}
-          // showDots={true}
           responsive={responsive}
-          // ssr={true} // means to render carousel on server-side.
           infinite={true}
           arrows={false}
           customButtonGroup={<ButtonGroup/>}
@@ -70,7 +68,7 @@ const CarouselProject: React.FC<Props> = ({ deviceType }) => {
           autoPlaySpeed={5000}
           partialVisible={deviceType !== 'mobile'}
           transitionDuration={600}
-          containerClass="carousel-container"
+          containerClass="carousel-project-container"
           removeArrowOnDeviceType={['tablet', 'mobile']}
           deviceType={deviceType}
           itemClass="carousel-item"
