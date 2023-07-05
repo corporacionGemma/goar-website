@@ -1,5 +1,5 @@
 import React from 'react'
-import { type SocialNetwork } from '../../types.t'
+import { type SocialNetwork } from '../../types'
 import { motion } from 'framer-motion'
 import { SocialContainer } from './SocialContainer'
 

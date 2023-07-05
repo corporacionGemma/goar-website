@@ -11,3 +11,10 @@ export interface SocialNetwork {
   label: string
   href: string
 }
+export interface CountNumber {
+  start?: number
+  end?: number
+  duration?: number
+  separator?: string
+  suffix?: string
+}

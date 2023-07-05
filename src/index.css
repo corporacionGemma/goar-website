@@ -43,13 +43,16 @@ body{
   align-items: center;
 }
 .descriptionComponentBlue{
-  color: #00235A;
-  text-shadow: rgb(39, 59, 114) 1px 0px 0px, rgb(39, 59, 114) 0.540302px 0.841471px 0px, rgb(39, 59, 114) -0.416147px 0.909297px 0px, rgb(39, 59, 114) -0.989992px 0.14112px 0px, rgb(39, 59, 114) -0.653644px -0.756802px 0px, rgb(39, 59, 114) 0.283662px -0.958924px 0px, rgb(39, 59, 114) 0.96017px -0.279415px 0px;
+  -webkit-text-stroke: 1px #273B72;
+  color: transparent; 
 }
 
-.descriptionComponent{
-    color: white;
-    text-shadow: rgb(232, 232, 233) 1px 0px 0px, rgb(232, 232, 233) 0.540302px 0.841471px 0px, rgb(232, 232, 233) -0.416147px 0.909297px 0px, rgb(232, 232, 233) -0.989992px 0.14112px 0px, rgb(232, 232, 233) -0.653644px -0.756802px 0px, rgb(232, 232, 233) 0.283662px -0.958924px 0px, rgb(232, 232, 233) 0.96017px -0.279415px 0px;
+.countNumber,.descriptionComponent{
+    color: transparent;
+    /* -webkit-text-stroke: 1px #E8E8E9; */
+    -webkit-text-stroke: 1px #dedfe0;
+    /* -webkit-text-stroke: 1px #273B72; */
+    /* text-shadow: rgb(232, 232, 233) 1px 0px 0px, rgb(232, 232, 233) 0.540302px 0.841471px 0px, rgb(232, 232, 233) -0.416147px 0.909297px 0px, rgb(232, 232, 233) -0.989992px 0.14112px 0px, rgb(232, 232, 233) -0.653644px -0.756802px 0px, rgb(232, 232, 233) 0.283662px -0.958924px 0px, rgb(232, 232, 233) 0.96017px -0.279415px 0px; */
 }
 .imageSection{
   overflow-clip-margin: content-box;
@@ -116,7 +119,7 @@ body{
   transition: .3s ease all;
 }
 .normal-blue{
-  background-color: #FF5E14;
+  background-color: #00235A;
   transition: .3s ease all;
 }
 .blueProject-button{
@@ -165,5 +168,27 @@ body{
   line-height: 24px;
   width: 151px;
   border-radius: 2px;
-  padding: 14px 38px;
+  padding: 12px 38px;
+}
+.sectionArrowCarousel{
+  background-image: url(/assets/slider_home.png);
+}
+.dot-list-carousel{
+  bottom: 23px;
+  gap: 5px;
+}
+.react-multi-carousel-dot button {
+  transform: scale(1);
+  background: #00235A;
+  border: none;
+  height: 8px;
+  width: 8px;
+  transition: .3 ease;
+}
+.react-multi-carousel-dot--active button {
+  transform: scale(1.4);
+}
+.item-class-carousel{
+  min-width: 100vh;
+  width: 100%;
 }

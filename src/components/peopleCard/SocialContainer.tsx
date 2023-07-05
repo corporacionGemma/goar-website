@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
-import { type SocialNetwork } from '../../types.t'
+import { type SocialNetwork } from '../../types'
 import { motion } from 'framer-motion'
 import { BiSolidShareAlt } from 'react-icons/bi'
 

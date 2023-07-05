@@ -34,7 +34,8 @@ const TitleComponent: React.FC<Props> = ({ text, description, colorText, classNa
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3
+        duration: 0.5,
+        delay: 0.2
       }
     }
   }
@@ -44,9 +45,9 @@ const TitleComponent: React.FC<Props> = ({ text, description, colorText, classNa
       {
         animationTitle
           ? (
-          <motion.div initial="hidden" whileInView="onScreen" variants={titleItem} viewport={{ once: true, amount: 0.7 }} className='flex flex-col gap-2'>
-            <h6 className={`text-[16px] tracking-[.02em] uppercase ${colorText} font-[500]`}>{subtitle}</h6>
-            <h2 className={`text-[80px] z-[2] mt-[25px] leading-[1em] tracking-[-0.01em] font-[900] ${colorText}`}>{text}</h2>
+          <motion.div initial="hidden" whileInView="onScreen" variants={titleItem} viewport={{ once: true, amount: 0.7 }} className='flex flex-col'>
+            <h6 className={`text-[14px] pl-1 tracking-[.02em] uppercase ${colorText} font-[500]`}>{subtitle}</h6>
+            <h2 className={`text-[80px] z-[2]  leading-[1em] tracking-[-0.01em] font-[900] ${colorText}`}>{text}</h2>
           </motion.div>
             )
           : (

@@ -1,4 +1,4 @@
-import { type Featured } from '../types.t'
+import { type Featured } from '../types'
 
 const features: Featured[] = [
   {

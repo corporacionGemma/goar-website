@@ -10,8 +10,8 @@ import partners from '../utils/partners'
 import PartnerItem from '../components/PartnerItem'
 import people from '../utils/people'
 import PeopleCard from '../components/peopleCard/PeopleCard'
-import { CarouselProject } from '../components'
-import CarouselHome from '../components/carouselHome.tsx/carouselHome'
+import { CarouselHome, CarouselProject, Counter } from '../components'
+import valuesProjects from '../utils/valuesProjects'
 
 interface Props {
   deviceType: string
@@ -47,7 +47,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
   return (
 		<main className="w-full">
 			<div className='w-full'>
-				<CarouselHome/>
+				<CarouselHome deviceType={deviceType}/>
 			</div>
 			{/* services */}
 			<div className="w-full flex flex-col items-center">
@@ -147,6 +147,16 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					</BoxTransition>
 				</div>
 					<img src={'/assets/image3.png'} alt="image3" width={'100%'} height={725} className='h-[700px] object-cover bg-center'/>
+			</div>
+			{/* */}
+			<div className='w-full flex mt-[103px] justify-center'>
+				<div className='w-[90%] grid grid-cols-4 gap-[30px]'>
+					{
+						valuesProjects.map(value => (
+							<Counter key={value.id} end={value.value} title={value.title} subtitle={value.subtitle}/>
+						))
+					}
+				</div>
 			</div>
 			{/* */}
 			<div className='w-full'>
