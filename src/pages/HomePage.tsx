@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import TitleComponent from '../components/TitleComponent'
 import servicesList from '../utils/services'
 import BannerInfo from '../components/footer/BannerInfo'
@@ -13,11 +13,18 @@ import PeopleCard from '../components/peopleCard/PeopleCard'
 import { CarouselHome, CarouselProject, Counter, StatisticValue } from '../components'
 import valuesProjects from '../utils/valuesProjects'
 import statisticList from '../utils/statisticValues'
+import infoProject from '../utils/infoProject'
+import Acordeon from '../components/acordeon/Acordeon'
 
 interface Props {
   deviceType: string
 }
 const HomePage: React.FC<Props> = ({ deviceType }) => {
+  const [selected, setselected] = useState<string | number>(0)
+
+  const showAcordeon = (id: number | string): void => {
+    setselected(id)
+  }
   const partnerRef = useRef<HTMLDivElement>(null)
   const renderFeatureds = useCallback(
     (): React.ReactNode => {
@@ -64,7 +71,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					))}
 				</div>
 			</div>
-			{/* */}
+			{/* about company */}
 			<div className="flex justify-center">
 				<div className="w-[84%] grid grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
 					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
@@ -101,7 +108,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					<CarouselProject deviceType={deviceType}/>
 				</div>
 			</div>
-			{/***/}
+			{/* Partners */}
 			<div className='w-full partnerContainer flex justify-center py-[120px]'>
 				<ul className='w-[90%] grid grid-cols-4 gap-5 h-[110px]'>
 						{
@@ -159,7 +166,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					}
 				</div>
 			</div>
-			{/* */}
+			{/* professionals */}
 			<div className='w-full'>
 				<TitleComponent
 					text='PROFESSIONALS'
@@ -169,7 +176,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 				/>
 				<div className='w-full grid grid-cols-4 px-7 pt-[40px] pb-[100px] gap-7'>
 					{
-						people.map(person => (
+						people.slice(0, 4).map(person => (
 							<PeopleCard
 								key={person.id}
 								socialNetwork={person.socialNetwork}
@@ -181,13 +188,39 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 				</div>
 			</div>
 			{/* */}
-			<div className='w-full flex mt-[103px] justify-center'>
+			<div className='w-full flex mt-[103px] mb-[80px] justify-center'>
 				<div className='w-[90%] grid grid-cols-3 gap-[30px]'>
 					{
 						statisticList.map(value => (
 							<StatisticValue key={value.id} end={value.value} title={value.title} subtitle={value.subtitle} description={value.description}/>
 						))
 					}
+				</div>
+			</div>
+			{/* */}
+			<div className="flex justify-center">
+				<div className="w-[84%] grid  grid-cols-2 items-center py-[40px] relative z-[5]">
+					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
+					<div className='w-full h-max '>
+						<BoxTransition>
+							<img
+								src="/assets/image5.jpg"
+								width={'100%'} height={'400px'}
+								alt="image1"
+								loading='lazy'
+								decoding='async'
+								className='imageSection'/>
+						</BoxTransition>
+					</div>
+					<div className='w-full h-full'>
+						<div className='w-full h-max'>
+							{
+								infoProject.map(element => (
+									<Acordeon key={element.id} id={element.id} title={element.title} description={element.description} selected={selected} cb={showAcordeon}/>
+								))
+							}
+						</div>
+					</div>
 				</div>
 			</div>
 		</main>

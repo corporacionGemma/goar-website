@@ -8,6 +8,7 @@ import ContactPage from './pages/ContactPage'
 import Error404 from './pages/Error404'
 import routes from './utils/routes'
 import UAParser from 'ua-parser-js'
+import Team from './pages/Team'
 
 const App: React.FC = () => {
   const [deviceType, setDeviceType] = useState('desktop')
@@ -15,7 +16,7 @@ const App: React.FC = () => {
     const parser = new UAParser()
     parser.setUA(navigator.userAgent)
     const result = parser.getResult()
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions, @typescript-eslint/prefer-nullish-coalescing
     const deviceType = result.device?.type || 'desktop'
     setDeviceType(deviceType)
   }, [])
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Route element={<Layout/>}>
           <Route index element={<HomePage deviceType={deviceType} />} path={routes.home} />
           <Route element={<AboutPage />} path={routes.about} />
+          <Route element={<Team />} path={routes.team} />
           <Route element={<ProjectPage />} path={routes.projects} />
           <Route element={<ContactPage />} path={routes.contact} />
           <Route element={<Error404 />} path={routes.error} />

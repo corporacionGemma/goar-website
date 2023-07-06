@@ -13,6 +13,10 @@ const NavBar: React.FC = () => {
       path: routes.about
     },
     {
+      label: 'Equipo',
+      path: routes.team
+    },
+    {
       label: 'Proyectos',
       path: routes.projects
     },
@@ -32,7 +36,7 @@ const NavBar: React.FC = () => {
         </div>
       </Link>
       <div className='navContainer'>
-        <ul className='grid grid-cols-4 justify-items-center text-secondary-text h-full items-center'>
+        <ul className='grid grid-cols-5 justify-items-center text-secondary-text h-full items-center'>
           {
             pages.map(item => (
               <NavLink

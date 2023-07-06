@@ -14,7 +14,7 @@ body{
 .topLink:hover{
   color: #FF5E14;
 }
-.backgroundImg{
+.imageAcordeon,.backgroundImg{
   background-image: url(/assets/icons/default_pattern.png);
 }
 /*navbar*/
@@ -191,4 +191,18 @@ body{
 .item-class-carousel{
   min-width: 100vh;
   width: 100%;
+}
+
+/*Acordeon*/
+.containerAcordeon{
+  transition: .4s ease all;
+}
+.activeAcordeon,.containerAcordeon:hover .containerIcon-acordeon{
+  background-color: #FF5E14;
+  box-shadow: 1px 10px 20px -1px rgba(255,94,20,0.41);
+  -webkit-box-shadow: 1px 10px 20 -1px rgba(255,94,20,0.41);
+  -moz-box-shadow: 1px 10px 20px -1px rgba(255,94,20,0.41);
+}
+.activeAcordeon,.containerAcordeon:hover .containerIcon-acordeon .iconsAcordeon{
+  color: white
 }

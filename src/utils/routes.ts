@@ -3,6 +3,7 @@ const routes = {
   about: 'nosotros',
   projects: 'proyectos',
   contact: 'contacto',
+  team: 'equipo',
   error: '*'
 }
 

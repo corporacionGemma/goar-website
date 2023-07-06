@@ -20,7 +20,7 @@ const Counter: React.FC<Props> = ({ start = 0, end = 100, duration = 3, separato
         decimal=""
         scrollSpyOnce={true}
         enableScrollSpy={true}
-        scrollSpyDelay={1500}
+        scrollSpyDelay={700}
       >
         {({ countUpRef }) => (
           <div className='flex items-center'>
