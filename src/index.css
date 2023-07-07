@@ -197,7 +197,7 @@ body{
 .containerAcordeon{
   transition: .4s ease all;
 }
-.activeAcordeon,.containerAcordeon:hover .containerIcon-acordeon{
+.button-form:hover,.activeAcordeon,.containerAcordeon:hover .containerIcon-acordeon{
   background-color: #FF5E14;
   box-shadow: 1px 10px 20px -1px rgba(255,94,20,0.41);
   -webkit-box-shadow: 1px 10px 20 -1px rgba(255,94,20,0.41);
@@ -205,4 +205,33 @@ body{
 }
 .activeAcordeon,.containerAcordeon:hover .containerIcon-acordeon .iconsAcordeon{
   color: white
+}
+
+/*spinner*/
+.spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, #6a509d);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-zp9dbg 1s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Formulario */
+.inputForm{
+  font-size: 26px;
+  line-height: calc(50px - (12px * 2) - 2px);
+  color: #001659;
+}
+.inputForm:focus{
+  border-color: #FF5E14 !important;
+}
+.button-form{
+  transition: .4s ease all;
 }

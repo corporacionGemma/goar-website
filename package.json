@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/ua-parser-js": "^0.7.36",
     "autoprefixer": "^10.4.14",
+    "formik": "^2.4.2",
     "framer-motion": "^10.12.18",
     "lodash": "4.17.21",
     "postcss": "^8.4.24",
