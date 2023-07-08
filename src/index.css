@@ -42,7 +42,7 @@ body{
   justify-items: center;
   align-items: center;
 }
-.descriptionComponentBlue{
+.countNumberBlue,.descriptionComponentBlue{
   -webkit-text-stroke: 1px #273B72;
   color: transparent; 
 }
@@ -212,7 +212,7 @@ body{
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: conic-gradient(#0000 10%, #6a509d);
+  background: conic-gradient(#0000 10%, #fff);
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
   animation: spinner-zp9dbg 1s infinite linear;
 }

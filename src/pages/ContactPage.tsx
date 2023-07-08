@@ -10,6 +10,8 @@ const ContactPage: React.FC = () => {
           title={'CONTACT US'}
           subtitle={'EXPLORE THE FEATURES'}
           description={'Etiam scelerisque tortor at lectus dapibus, nec fermentum diam feugiat. Morbi rutrum magna et dui.'}
+          color='text-white'
+          colorDescription='text-white'
         />
       </div>
       <div className='w-full py-[130px] flex justify-center'>

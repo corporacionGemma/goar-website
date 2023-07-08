@@ -1,6 +1,6 @@
 const sliders = [
   {
-    id: 0,
+    id: 1,
     subtitle: 'WELCOME TO GOAR',
     title: 'BUILD A BETTER TOMORROW',
     backtitle: 'SCHEDULE',
@@ -8,7 +8,7 @@ const sliders = [
     description: 'Constructing a modern website requires modern tools. This is why we created Wilmër, a powerful WP theme.'
   },
   {
-    id: 1,
+    id: 2,
     subtitle: 'WELCOME TO GOAR',
     title: 'STAING AHEAD OF SCHEDULE',
     backtitle: 'SCHEDULE',
@@ -16,7 +16,7 @@ const sliders = [
     description: 'Get ready for a smooth site creation experience. 0 coding knowledge needed, drag-and-drop page editor included.'
   },
   {
-    id: 2,
+    id: 3,
     subtitle: 'WELCOME TO GOAR',
     title: 'ALWAYS STRONG FUNDATIONS',
     backtitle: 'SCHEDULE',

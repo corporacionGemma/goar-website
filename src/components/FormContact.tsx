@@ -3,7 +3,8 @@ import {
   Formik,
   Form,
   Field,
-  ErrorMessage
+  ErrorMessage,
+  type FormikErrors
 } from 'formik'
 
 interface MyFormValues {
@@ -23,10 +24,7 @@ export const FormContact: React.FC = () => {
       <Formik
         initialValues={initialValues}
         validate={(values) => {
-          const errors = {
-            name: '',
-            email: ''
-          }
+          const errors: FormikErrors<MyFormValues> = {}
           if (values.name === '') {
             errors.name = 'El nombre es requerido*'
           }
@@ -50,21 +48,17 @@ export const FormContact: React.FC = () => {
         onSubmit={(values, actions) => {
           console.log({ values, actions })
           // alert(JSON.stringify(values, null, 2))
-          // setTimeout(() => {
-          //   actions.setSubmitting(false)
-          //   actions.resetForm()
-          // }, 40000)
+          setTimeout(() => {
+            actions.setSubmitting(false)
+            actions.resetForm()
+          }, 3000)
         }}
       >
         {({ isSubmitting, errors, touched }) => {
           return (
             <Form>
               <div
-                  className={`block mt-[29px] ${
-                    errors.name !== '' && touched.name === true && errors.name !== ''
-                      ? 'pb-[16px]'
-                      : 'pb-[40px]'
-                  }`}
+                  className={'block mt-[29px] h-[108px]'}
               >
                 <label className='block mb-[11px] cursor-pointer font-[500] text-[14px] tracking-[.1em] uppercase' htmlFor="name">NOMBRES Y APELLIDOS <span className='text-primary'>REQUERIDO</span></label>
                 <Field
@@ -84,11 +78,7 @@ export const FormContact: React.FC = () => {
                 />
               </div>
               <div
-                  className={`block mt-[29px] ${
-                    errors.email !== '' && touched.email === true && errors.email !== ''
-                      ? 'pb-[16px]'
-                      : 'pb-[40px]'
-                  }`}
+                  className={'block mt-[29px] h-[108px]'}
               >
                 <label className='block mb-[11px] cursor-pointer font-[500] text-[14px] tracking-[.1em] uppercase' htmlFor="email">CORREO ELECTRÓNICO <span className='text-primary'>REQUERIDO</span></label>
                 <Field
@@ -97,7 +87,7 @@ export const FormContact: React.FC = () => {
                       ? 'border-b-red-600'
                       : 'border-tertiary-border'
                   } w-full border-b-[1px] outline-none inputForm`}
-                  type="text"
+                  type="email"
                   id="email"
                   name="email"
                 />
@@ -122,14 +112,14 @@ export const FormContact: React.FC = () => {
                 className='bg-primary py-[7px] px-[40px] text-white button-form rounded '
               >
                 {
-                  isSubmitting === true
+                  isSubmitting
                     ? (
-                      <div className="w-full flex justify-center py-2">
+                      <div className="w-full flex justify-center px-6">
                         <div className="spinner"></div>
                       </div>
                       )
                     : (
-                      <p className="font-[400] tracking-[.02em] text-[16px] leading-[2em]">CONSULTAR</p>
+                      <p className="font-[400] tracking-[.02em] text-[16px] py-[2px] leading-[2em]">CONSULTAR</p>
                       )
                 }
               </button>

@@ -30,7 +30,7 @@ const CarouselHome: React.FC<Props> = ({ deviceType }) => {
     return (
       <div className='left-0 bottom-0 w-full sectionArrowCarousel h-[70px] flex justify-start absolute'>
           <ButtonSlider
-            cb={next}
+            cb={previous}
             label={
               <>
                 <BiChevronLeft className='text-[30px]'/>
@@ -38,7 +38,7 @@ const CarouselHome: React.FC<Props> = ({ deviceType }) => {
             }
             style='orangeProject-button'/>
           <ButtonSlider
-            cb={previous}
+            cb={next}
             label={
               <>
                 <BiChevronRight className='text-[30px]'/>

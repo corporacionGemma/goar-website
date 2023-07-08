@@ -8,9 +8,11 @@ interface Props {
   backtitle: string
   src: string
   description: string
+  color?: string
+  colorDescription?: string
 }
 
-const Presentation: React.FC<Props> = ({ subtitle, title, backtitle, src, description }) => {
+const Presentation: React.FC<Props> = ({ subtitle, title, backtitle, src, description, color = 'text-secondary-text', colorDescription = '' }) => {
   const paragraph = {
     hidden: {
       opacity: 0,
@@ -36,7 +38,7 @@ const Presentation: React.FC<Props> = ({ subtitle, title, backtitle, src, descri
             text={title}
             subtitle={subtitle}
             description={backtitle}
-            colorText="text-secondary-text"
+            colorText={color}
             classNameDescription="descriptionComponent"
             animationTitle={true}
             bottom='bottom-[25px]'
@@ -47,7 +49,7 @@ const Presentation: React.FC<Props> = ({ subtitle, title, backtitle, src, descri
           initial="hidden"
           whileInView="onScreen"
           viewport={{ once: true }}
-          className='font-[400] pl-[132px] text-[20px] leading-[24px] mt-[15px] w-[650px]'
+          className={`${colorDescription} font-[400] pl-[132px] text-[20px] leading-[24px] mt-[15px] w-[650px]`}
         >
           {description}
         </motion.p>

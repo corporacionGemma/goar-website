@@ -96,7 +96,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					</div>
 				</div>
 			</div>
-			{/* */}
+			{/* Projects */}
 			<div className='w-full bg-secondary-color '>
 				<TitleComponent
 					text="Projects"
@@ -156,7 +156,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 				</div>
 					<img src={'/assets/image3.png'} alt="image3" width={'100%'} height={725} className='h-[700px] object-cover bg-center'/>
 			</div>
-			{/* */}
+			{/* values project */}
 			<div className='w-full flex mt-[103px] justify-center'>
 				<div className='w-[90%] grid grid-cols-4 gap-[30px]'>
 					{

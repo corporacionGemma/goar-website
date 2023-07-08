@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useLayoutEffect, useState, useEffect, useRef } from 'react'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Layout from './components/Layout'
 import HomePage from './pages/HomePage'
@@ -20,6 +20,7 @@ const App: React.FC = () => {
     const deviceType = result.device?.type || 'desktop'
     setDeviceType(deviceType)
   }, [])
+
   return (
     <BrowserRouter>
       <Routes>
@@ -27,7 +28,7 @@ const App: React.FC = () => {
           <Route index element={<HomePage deviceType={deviceType} />} path={routes.home} />
           <Route element={<AboutPage />} path={routes.about} />
           <Route element={<Team />} path={routes.team} />
-          <Route element={<ProjectPage />} path={routes.projects} />
+          <Route element={<ProjectPage deviceType={deviceType} />} path={routes.projects} />
           <Route element={<ContactPage />} path={routes.contact} />
           <Route element={<Error404 />} path={routes.error} />
         </Route>
