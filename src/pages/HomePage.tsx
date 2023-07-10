@@ -53,7 +53,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
     []
   )
   return (
-		<main className="w-full">
+		<main className="w-full mt-[70px] lg:mt-0">
 			<div className='w-full'>
 				<CarouselHome deviceType={deviceType}/>
 			</div>
@@ -65,7 +65,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					colorText="text-secondary-text"
 					classNameDescription="descriptionComponent"
 				/>
-				<div className="w-[84%] grid grid-cols-4 gap-7 pt-[30px] pb-[62px]">
+				<div className="w-[84%] grid grid-cols-2 lg:grid-cols-4 gap-7 pt-[30px] pb-[62px]">
 					{servicesList.map((service) => (
 						<BannerInfo key={service.id} title={service.title} subtitle={service.subtitle} />
 					))}
@@ -73,7 +73,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* about company */}
 			<div className="flex justify-center">
-				<div className="w-[84%] grid grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
+				<div className="w-[84%] grid grid-cols-1 lg:grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
 					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
 					<div className='w-full h-max '>
 						<BoxTransition>
@@ -110,7 +110,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* Partners */}
 			<div className='w-full partnerContainer flex justify-center py-[120px]'>
-				<ul className='w-[90%] grid grid-cols-4 gap-5 h-[110px]'>
+				<ul className='w-[90%] grid grid-cols-2 lg:grid-cols-4 gap-5 h-[110px]'>
 						{
 							partners.map(item => (
 								<li key={item.id} className='overflow-hidden'>
@@ -129,7 +129,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					classNameDescription="descriptionComponent"
 				/>
 				<div className='pt-[45px] flex justify-center'>
-					<div className='grid w-[84%] items-center justify-items-center grid-cols-3 gap-8'>
+					<div className='grid w-[84%] items-center justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{
 						renderFeatureds()
 						}
@@ -158,7 +158,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* values project */}
 			<div className='w-full flex mt-[103px] justify-center'>
-				<div className='w-[90%] grid grid-cols-4 gap-[30px]'>
+				<div className='w-[90%] grid grid-cols-2 lg:grid-cols-4 gap-[30px]'>
 					{
 						valuesProjects.map(value => (
 							<Counter key={value.id} end={value.value} title={value.title} subtitle={value.subtitle}/>
@@ -174,7 +174,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					colorText="text-secondary-text"
 					classNameDescription="descriptionComponent"
 				/>
-				<div className='w-full grid grid-cols-4 px-7 pt-[40px] pb-[100px] gap-7'>
+				<div className='w-full grid grid-cols-2 lg:grid-cols-4 px-7 pt-[40px] pb-[100px] gap-7'>
 					{
 						people.slice(0, 4).map(person => (
 							<PeopleCard
@@ -189,7 +189,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* */}
 			<div className='w-full flex mt-[103px] mb-[80px] justify-center'>
-				<div className='w-[90%] grid grid-cols-3 gap-[30px]'>
+				<div className='w-[90%] grid  grid-cols-2 lg:grid-cols-3 gap-[30px]'>
 					{
 						statisticList.map(value => (
 							<StatisticValue key={value.id} end={value.value} title={value.title} subtitle={value.subtitle} description={value.description}/>
@@ -199,7 +199,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* */}
 			<div className="flex justify-center">
-				<div className="w-[84%] grid  grid-cols-2 items-center py-[40px] relative z-[5]">
+				<div className="w-[84%] grid grid-cols-1 lg:grid-cols-2 items-center py-[40px] relative z-[5]">
 					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
 					<div className='w-full h-max '>
 						<BoxTransition>

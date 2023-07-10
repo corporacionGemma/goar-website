@@ -24,7 +24,8 @@ const ContactSection: React.FC = () => {
       id: 3,
       icon: <MdOutlineWatchLater/>,
       information: <p>Lun - Vie 9:00 - 18:00, Sab 9:00 - 13:00</p>,
-      href: routes.contact
+      href: routes.contact,
+      type: 'route'
     }
   ]
   const findIcon = (id: number): JSX.Element => {
@@ -32,10 +33,10 @@ const ContactSection: React.FC = () => {
     return icons[id]
   }
   return (
-    <div className='w-full h-[40px] px-[30px] leading-[1] text-[14px] align-middle text-secondary-text flex justify-between'>
+    <div className='hidden w-full h-[40px] px-[30px] leading-[1] text-[14px] align-middle text-secondary-text lg:flex justify-between'>
       <div className='flex gap-7'>
         {contact.map(item => (
-          <LocationItem key={item.id} icon={item.icon} information={item.information} href={item.href} gap={'gap-1'}/>
+          <LocationItem key={item.id} icon={item.icon} information={item.information} href={item.href} gap={'gap-1'} type={item.type}/>
         ))}
       </div>
       <div className='flex gap-6 items-center text-[15px]'>

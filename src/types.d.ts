@@ -18,3 +18,10 @@ export interface CountNumber {
   separator?: string
   suffix?: string
 }
+
+export interface RoutesIF {
+  label: string
+  path: string
+  delayOut: number
+  delayIn: number
+}

@@ -10,7 +10,7 @@ const CopySection: React.FC = () => {
     return icons[id]
   }
   return (
-    <div className='copySectionContain w-full flex justify-center'>
+    <div className='copySectionContain w-full lg:flex-row flex-col flex justify-center'>
       <div className='copySection h-[77px] w-[86%]'>
         <Link to={routes.home} className='flex justify-center items-center w-[302px] h-[76px] bg-primary'>
           <div className='text-[26px] font-[900]'>

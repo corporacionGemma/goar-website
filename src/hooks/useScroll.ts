@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 
-const useScroll = ({ scrollRef, scrollValue }: { scrollRef: any, scrollValue: number }): boolean => {
+const useScroll = (scrollRef: React.RefObject<HTMLDivElement>, scrollValue: number): boolean => {
   const [value, setValue] = useState(false)
   useEffect(() => {
     const handleScroll = (): void => {
       const div = scrollRef.current
-      const { y } = div?.getBoundingClientRect()
-      const result = y < -scrollValue
+      const position = div?.getBoundingClientRect()
+      const result = position?.y !== undefined ? position?.y < -scrollValue : false
       setValue(result)
     }
     window.addEventListener('scroll', handleScroll)

@@ -16,7 +16,6 @@ interface MyFormValues {
 export const FormContact: React.FC = () => {
   const initialValues: MyFormValues = { name: '', email: '', message: '' }
   const TextTarea = ({ field, form, ...props }: { field: any, props: any, form: any }): JSX.Element => {
-    console.log(form)
     return <textarea id="message" rows={6} {...field} {...props} />
   }
   return (
@@ -37,17 +36,8 @@ export const FormContact: React.FC = () => {
           }
           return errors
         }}
-        // onSubmit={(values, actions) => {
-        //   console.log({ values, actions })
-        //   // alert(JSON.stringify(values, null, 2))
-        //   // setTimeout(() => {
-        //   //   actions.setSubmitting(false)
-        //   //   actions.resetForm()
-        //   // }, 40000)
-        // }}
         onSubmit={(values, actions) => {
           console.log({ values, actions })
-          // alert(JSON.stringify(values, null, 2))
           setTimeout(() => {
             actions.setSubmitting(false)
             actions.resetForm()

@@ -36,7 +36,7 @@ const FooterInfo: React.FC = () => {
     }
   ]
   return (
-    <div className='w-[88%] pt-[96px] pb-[100px] grid grid-cols-4'>
+    <div className='w-[88%] pt-[96px] pb-[100px] grid md:grid-cols-2 lg:grid-cols-4'>
       <FooterInfoContainer>
         <FooterTitle title='Construye con GOAR'/>
         <p className='mt-[17px] text-[18px] text-tertiary-footer1'>
@@ -47,6 +47,7 @@ const FooterInfo: React.FC = () => {
 
           <LocationItem
             href={routes.contact}
+            type={'route'}
             information={
               <div className='text-tertiary-footer1 text-[18px] transition-all duration-300 hover:text-primary'>
                 <p>Lun - Vie 9:00 - 18:00</p>
