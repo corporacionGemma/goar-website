@@ -37,7 +37,7 @@ const Counter: React.FC<Props> = ({ start = 0, end = 100, duration = 3, separato
                   ? (<p className={`${color} text-[14px] font-[500] tracking-[.1em] uppercase leading-[2.3em]`}>{subtitle}</p>)
                   : (<p className='text-[14px] font-[500] tracking-[.1em] uppercase leading-[2.3em]'>{subtitle}</p>)
               }
-              <h3 className={`${color} text-[40px] leading-[.75em] font-[700]`}>{title}</h3>
+              <h3 className={`${color} text-[35px] sm:text-[40px] leading-[.75em] font-[700]`}>{title}</h3>
             </div>
           </div>
         )}

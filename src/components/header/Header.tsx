@@ -5,7 +5,11 @@ import { AnimatePresence } from 'framer-motion'
 import { NavBarMobile } from '..'
 import routes from '../../utils/routes'
 
-const Header: React.FC = () => {
+interface Props {
+  positionMobile: boolean
+}
+
+const Header: React.FC<Props> = ({ positionMobile }) => {
   const [menu, setMenu] = useState(false)
   const openMenu = (): void => {
     setMenu(!menu)
@@ -43,10 +47,11 @@ const Header: React.FC = () => {
     }
   ]
   return (
-    <header className='relative z-50'>
+    <header className='absolute top-0 left-0 lg:relative z-50'>
       <ContactSection/>
-      <NavBar isOpen={menu} openMenu={openMenu} pages={pages}/>
-      <AnimatePresence>{menu && <NavBarMobile listRoutes={pages} />}</AnimatePresence>
+      <div className='hidden lg:block w-full'>
+        <NavBar isOpen={menu} openMenu={openMenu} pages={pages}/>
+      </div>
     </header>
   )
 }

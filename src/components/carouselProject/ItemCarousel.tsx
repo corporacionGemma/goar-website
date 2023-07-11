@@ -41,7 +41,7 @@ const ItemCarousel: React.FC<Props> = ({ src, title, subtitle, description, id }
       className='w-full'
       >
       <div className='max-w-full h-auto'>
-        <motion.img variants={image} src={src} decoding='async' loading='lazy' width={1100} height={673} alt={title} />
+        <motion.img variants={image} src={src} decoding='async' loading='lazy' width={1100} height={673} alt={title} className='h-[320px] object-cover'/>
       </div>
       <div className='text-white max-w-full mt-[17px] mb-[11px]'>
         <h6 className='text-[12px] uppercase tracking-[.1em] font-[500]'>{subtitle}</h6>

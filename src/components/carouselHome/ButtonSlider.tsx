@@ -8,7 +8,7 @@ interface Props {
 
 const ButtonSlider: React.FC<Props> = ({ cb, label, style }) => {
   return (
-    <button className={`w-[70px] h-[70px] flex gap-2 text-white justify-center items-center z-[6] ${style}`} onClick={cb}>{label}</button>
+    <button className={`hidden md:flex w-[70px] h-[70px] gap-2 text-white justify-center items-center z-[6] ${style}`} onClick={cb}>{label}</button>
   )
 }
 

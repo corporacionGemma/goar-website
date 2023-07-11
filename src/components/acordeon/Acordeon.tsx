@@ -35,7 +35,7 @@ const Acordeon: React.FC<Props> = ({ cb, title, description, id, selected }) => 
   }
   return (
     <>
-      <div className={`${id !== selected ? 'imageAcordeon border-b-[1px] border-[#dedfe0]' : 'bg-white border-none'} containerAcordeon  py-3 pr-5 pl-12  w-full flex justify-between items-center cursor-pointer`} onClick={() => { callBack(id) }}>
+      <div className={`${id !== selected ? 'imageAcordeon border-b-[1px] border-[#dedfe0]' : 'bg-white border-none'} containerAcordeon py-5 lg:py-3 pl-3 pr-3 lg:pr-5 lg:pl-12  w-full flex justify-between items-center cursor-pointer`} onClick={() => { callBack(id) }}>
         <span className='text-[26px] leading-[1.15em] font-[700] text-secondary-text'>{title}</span>
         <div className={`${id === selected ? 'activeAcordeon' : ''} w-[50px] h-[50px] rounded containerIcon-acordeon flex justify-center items-center`}>
           {id !== selected
@@ -54,7 +54,7 @@ const Acordeon: React.FC<Props> = ({ cb, title, description, id, selected }) => 
             ease: 'linear'
           }}
           variants={variants}
-          className='w-full overflow-clip pl-12 pr-[80px] bg-white'
+          className='w-full overflow-clip pl-3 lg:pl-12 pr-[70px] bg-white'
         >
           <p className='font-[400] text-[18px] '>{description}</p>
           <br/>

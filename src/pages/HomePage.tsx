@@ -45,7 +45,9 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					src={featured.src}
 					alt="imagefeatured"
 					width={500}
-					height={500} />
+					height={500}
+					className='w-full object-cover md:w-[500px]'
+					/>
         )
       }
       )
@@ -65,7 +67,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					colorText="text-secondary-text"
 					classNameDescription="descriptionComponent"
 				/>
-				<div className="w-[84%] grid grid-cols-2 lg:grid-cols-4 gap-7 pt-[30px] pb-[62px]">
+				<div className="w-[84%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 pt-[30px] pb-[62px]">
 					{servicesList.map((service) => (
 						<BannerInfo key={service.id} title={service.title} subtitle={service.subtitle} />
 					))}
@@ -73,7 +75,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* about company */}
 			<div className="flex justify-center">
-				<div className="w-[84%] grid grid-cols-1 lg:grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
+				<div className="w-full px-8 sm:px-0 sm:w-[84%] grid grid-cols-1 lg:grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
 					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
 					<div className='w-full h-max '>
 						<BoxTransition>
@@ -86,10 +88,10 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 								className='imageSection'/>
 						</BoxTransition>
 					</div>
-					<div className='px-[26px] py-10'>
+					<div className='px-0 lg:px-[26px] py-6 sm:py-10'>
 						<h6 className='text-[14px] text-secondary-text tracking-[.1em] uppercase font-[500] mb-[2px]'>EXPLORE THE FEATURES</h6>
-						<h2 className='text-[60px] text-secondary-text leading-[0.96em] tracking-[-.02em] font-[700]'>Full project management</h2>
-						<p className='font-[400] text-[18px] leading-[26px] mt-5 pr-[110px]'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur.</p>
+						<h2 className='text-[40px] sm:text-[60px] text-secondary-text leading-[0.96em] tracking-[-.02em] font-[700]'>Full project management</h2>
+						<p className='font-[400] text-[18px] leading-[26px] mt-5 pr-0 md:pr-[110px]'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur.</p>
 						<div className='mt-8'>
 							<Button type='normal-orange' label={'Read More'} styleButton='projecButton' cb={() => {}}/>
 						</div>
@@ -110,10 +112,10 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* Partners */}
 			<div className='w-full partnerContainer flex justify-center py-[120px]'>
-				<ul className='w-[90%] grid grid-cols-2 lg:grid-cols-4 gap-5 h-[110px]'>
+				<ul className='w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
 						{
 							partners.map(item => (
-								<li key={item.id} className='overflow-hidden'>
+								<li key={item.id} className='overflow-hidden  w-full'>
 									<PartnerItem src={item.src} name={item.name} partnerRef={partnerRef} />
 								</li>
 							))
@@ -129,7 +131,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 					classNameDescription="descriptionComponent"
 				/>
 				<div className='pt-[45px] flex justify-center'>
-					<div className='grid w-[84%] items-center justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+					<div className='grid px-8 w-full sm:px-0 sm:w-[84%] items-center justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{
 						renderFeatureds()
 						}
@@ -138,12 +140,12 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* */}
 			<div className='w-full bg-red-100 relative'>
-				<div className='absolute top-[110px] w-[622px] right-[200px]'>
+				<div className='absolute top-[100px] sm:top-[110px] overflow-hidden w-[90%] sm:w-[622px] right-[5%] sm:right-[200px]'>
 					<BoxTransition>
-							<div className='w-[622px] pt-[76px] pb-[85px] pl-[106px] pr-[112px] bg-primary'>
+							<div className='w-full sm:w-[622px] overflow-hidden h-[390px] sm:h-auto sm:pt-[76px] pb-[45px] pt-[35px] sm:pb-[85px] px-8 sm:pl-[106px] sm:pr-[112px] bg-primary'>
 								<div className='text-white'>
 									<h6 className='text-[14px] tracking-[.1em] font-[500]'>EXPLORE THE FEATURES</h6>
-									<h4 className='text-[60px] leading-[.96em] tracking-[-.02em] font-[700]'>Full project managemment</h4>
+									<h4 className='text-[40px] sm:text-[60px] leading-[.96em] tracking-[-.02em] font-[700]'>Full project managemment</h4>
 									<p className='mt-5 text-[18px] leading-[26px] font-[400]'>
 										Lorem ipsum dolor sit amet, quam felis adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme mus.
 									</p>
@@ -154,11 +156,11 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 							</div>
 					</BoxTransition>
 				</div>
-					<img src={'/assets/image3.png'} alt="image3" width={'100%'} height={725} className='h-[700px] object-cover bg-center'/>
+					<img src={'/assets/image3.png'} alt="image3" width={'100%'} height={725} className='h-[600px] sm:h-[700px] object-cover bg-center'/>
 			</div>
 			{/* values project */}
-			<div className='w-full flex mt-[103px] justify-center'>
-				<div className='w-[90%] grid grid-cols-2 lg:grid-cols-4 gap-[30px]'>
+			<div className='w-full mb-[85px] md:mb-0 flex mt-[103px] justify-center'>
+				<div className='w-[90%] grid grid-cols-1 md:grid-cols-2 justify-items-center lg:grid-cols-4 gap-[30px]'>
 					{
 						valuesProjects.map(value => (
 							<Counter key={value.id} end={value.value} title={value.title} subtitle={value.subtitle}/>
@@ -167,14 +169,14 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 				</div>
 			</div>
 			{/* professionals */}
-			<div className='w-full'>
+			<div className='w-full bg-[#F2F3F5]'>
 				<TitleComponent
 					text='PROFESSIONALS'
 					description='PEOPLE'
 					colorText="text-secondary-text"
 					classNameDescription="descriptionComponent"
 				/>
-				<div className='w-full grid grid-cols-2 lg:grid-cols-4 px-7 pt-[40px] pb-[100px] gap-7'>
+				<div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-8 sm:px-7 pt-[40px] pb-[100px] gap-7'>
 					{
 						people.slice(0, 4).map(person => (
 							<PeopleCard
@@ -189,7 +191,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* */}
 			<div className='w-full flex mt-[103px] mb-[80px] justify-center'>
-				<div className='w-[90%] grid  grid-cols-2 lg:grid-cols-3 gap-[30px]'>
+				<div className='w-full px-8 sm:px-0 sm:w-[90%] grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 sm:gap-[30px] justify-items-center'>
 					{
 						statisticList.map(value => (
 							<StatisticValue key={value.id} end={value.value} title={value.title} subtitle={value.subtitle} description={value.description}/>
@@ -199,7 +201,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* */}
 			<div className="flex justify-center">
-				<div className="w-[84%] grid grid-cols-1 lg:grid-cols-2 items-center py-[40px] relative z-[5]">
+				<div className="w-full px-8 sm:px-0 sm:w-[84%] grid grid-cols-1 lg:grid-cols-2 items-center py-[40px] relative z-[5]">
 					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
 					<div className='w-full h-max '>
 						<BoxTransition>

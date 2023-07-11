@@ -28,7 +28,7 @@ const CarouselHome: React.FC<Props> = ({ deviceType }) => {
   }
   const ButtonGroup = ({ next, previous }: ButtonGroupProps): JSX.Element => {
     return (
-      <div className='left-0 bottom-0 w-full sectionArrowCarousel h-[70px] flex justify-start absolute'>
+      <div className='flex left-0 bottom-0 w-full sectionArrowCarousel h-[70px] justify-start absolute'>
           <ButtonSlider
             cb={previous}
             label={

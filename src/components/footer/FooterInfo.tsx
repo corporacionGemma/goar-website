@@ -36,7 +36,7 @@ const FooterInfo: React.FC = () => {
     }
   ]
   return (
-    <div className='w-[88%] pt-[96px] pb-[100px] grid md:grid-cols-2 lg:grid-cols-4'>
+    <div className='w-full sm:w-[88%] pt-[96px] pb-[100px] grid md:grid-cols-2 lg:grid-cols-4 justify-items-center'>
       <FooterInfoContainer>
         <FooterTitle title='Construye con GOAR'/>
         <p className='mt-[17px] text-[18px] text-tertiary-footer1'>

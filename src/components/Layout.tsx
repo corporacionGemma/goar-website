@@ -6,8 +6,9 @@ import { AnimatePresence } from 'framer-motion'
 interface Props {
   children?: React.ReactNode
   position: boolean
+  positionMobile: boolean
 }
-const Layout: React.FC<Props> = ({ position }) => {
+const Layout: React.FC<Props> = ({ position, positionMobile }) => {
   return (
     <div>
       <AnimatePresence>
@@ -15,8 +16,7 @@ const Layout: React.FC<Props> = ({ position }) => {
           <HeaderFix/>
         ) }
       </AnimatePresence>
-      <Header/>
-      {/* {children} */}
+      <Header positionMobile={positionMobile}/>
       <Outlet/>
       <Footer/>
     </div>

@@ -32,7 +32,7 @@ const App: React.FC = () => {
       <BrowserRouter>
       <Wrapper>
           <Routes>
-            <Route element={<Layout position={position}/>}>
+            <Route element={<Layout position={position} positionMobile={positionMobile}/>}>
               <Route index element={<HomePage deviceType={deviceType} />} path={routes.home} />
               <Route element={<AboutPage />} path={routes.about} />
               <Route element={<Team />} path={routes.team} />

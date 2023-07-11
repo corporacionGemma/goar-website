@@ -12,24 +12,23 @@ interface Props {
 const CarouselProject: React.FC<Props> = ({ deviceType }) => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 2500, min: 1024 },
       items: 2,
       partialVisibilityGutter: 80
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      partialVisibilityGutter: 30
+      breakpoint: { max: 1024, min: 768 },
+      items: 1,
+      partialVisibilityGutter: 80
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      partialVisibilityGutter: 30
+      breakpoint: { max: 768, min: 0 },
+      items: 1
     }
   }
   const ButtonGroup = ({ next, previous }: ButtonGroupProps): JSX.Element => {
     return (
-      <div className=' top-[150px] left-[30px] buttonGroupSection flex flex-col gap-4 absolute'>
+      <div className=' buttonGroupSection h-max flex flex-col gap-4 absolute'>
           <ButtonCarousel
             cb={next}
             label={
@@ -52,13 +51,13 @@ const CarouselProject: React.FC<Props> = ({ deviceType }) => {
     )
   }
   return (
-    <div className='w-full flex '>
-      <div className='w-[17%] flex justify-center'>
+    <div className='w-full flex containerProject'>
+      <div className='buttonZone'>
         {/* <ButtonGroup/> */}
       </div>
-      <div className='w-[83%]'>
+      <div className='projectZone'>
         <Carousel
-          swipeable={false}
+          swipeable={deviceType === 'mobile'}
           draggable={false}
           responsive={responsive}
           infinite={true}

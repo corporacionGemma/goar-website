@@ -7,26 +7,25 @@ interface Props {
   partnerRef: React.RefObject<HTMLDivElement>
 }
 const PartnerItem: React.FC<Props> = ({ src, name, partnerRef }) => {
-  const item = {
+  const item2 = {
     rest: {
-      y: '-50%'
+      y: 0
     },
     onHover: {
-      y: 0,
+      y: '100%',
       transition: {
-        duration: 0.3,
-        type: 'spring'
+        duration: 0.2
       }
     }
   }
   return (
-    <motion.div initial="rest" whileHover={'onHover'} variants={item} ref={partnerRef}>
-      <div>
+    <motion.div initial="rest" whileHover={'onHover'} ref={partnerRef} className='relative'>
+      <motion.div variants={item2} className='absolute -top-[100%] left-0 w-full'>
         <img src={src} alt={name} width={'100%'}/>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div variants={item2}>
         <img src={src} alt={name} width={'100%'}/>
-      </div>
+      </motion.div>
     </motion.div>
   )
 }
