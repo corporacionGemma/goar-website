@@ -9,14 +9,15 @@ interface Props {
   positionMobile: boolean
 }
 const Layout: React.FC<Props> = ({ position, positionMobile }) => {
+  // console.log('postion:', position)
   return (
     <div>
       <AnimatePresence>
-        {position && (
+        {/* {position && (
           <HeaderFix/>
-        ) }
+        ) } */}
       </AnimatePresence>
-      <Header positionMobile={positionMobile}/>
+      <Header positionMobile={positionMobile} position={position}/>
       <Outlet/>
       <Footer/>
     </div>

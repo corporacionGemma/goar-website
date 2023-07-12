@@ -41,8 +41,8 @@ const TitleComponent: React.FC<Props> = ({ text, description, colorText, classNa
     }
   }
   return (
-    <div className='h-auto lg:h-[247px] w-full z-[5] relative  lg:pt-[142px]  uppercase'>
-      <motion.span initial="hidden" whileInView="onScreen" variants={title} viewport={{ once: true, amount: 0.5 }} className={`${classNameDescription} hidden bg-red-300 lg:absolute -z-[1] text-[180px] leading-[170px] font-[900] ${bottom} left-[60px]`}>{description}</motion.span>
+    <div className='h-auto lg:h-[247px] w-full pt-[40px] z-[5] relative uppercase'>
+      <motion.span initial="hidden" whileInView="onScreen" variants={title} viewport={{ once: true, amount: 0.5 }} className={`${classNameDescription} hidden lg:block absolute -z-[1] text-[180px] leading-[170px] font-[900] ${bottom} left-[60px]`}>{description}</motion.span>
       {
         animationTitle
           ? (

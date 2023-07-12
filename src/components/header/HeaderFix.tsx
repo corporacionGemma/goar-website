@@ -24,7 +24,7 @@ const HeaderFix: React.FC = () => {
     }
   }
   return (
-    <motion.div animate="onScreen" exit="exit" initial="hidden" variants={item} className={'w-full h-[70px] hidden lg:fixed left-0 top-0 overflow-hidden headerFix bg-white z-20'}>
+    <motion.div animate="onScreen" exit="exit" initial="hidden" variants={item} className={'w-full h-[70px] hidden lg:block fixed left-0 top-0 overflow-hidden headerFix bg-white z-20'}>
       <NavBar positionClass=''/>
     </motion.div>
   )

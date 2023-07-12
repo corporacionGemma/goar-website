@@ -13,14 +13,6 @@ const HeaderMobile: React.FC = () => {
         duration: 0.5,
         ease: 'easeInOut'
       }
-    },
-    exit: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.3,
-        ease: 'linear'
-      }
     }
   }
   return (

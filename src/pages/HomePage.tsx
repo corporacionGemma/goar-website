@@ -55,7 +55,7 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
     []
   )
   return (
-		<main className="w-full mt-[70px] lg:mt-0">
+		<main className="w-full">
 			<div className='w-full'>
 				<CarouselHome deviceType={deviceType}/>
 			</div>
@@ -140,9 +140,9 @@ const HomePage: React.FC<Props> = ({ deviceType }) => {
 			</div>
 			{/* */}
 			<div className='w-full bg-red-100 relative'>
-				<div className='absolute top-[100px] sm:top-[110px] overflow-hidden w-[90%] sm:w-[622px] right-[5%] sm:right-[200px]'>
+				<div className='absolute top-[100px] sm:top-[110px] overflow-hidden h-max w-[90%] sm:w-[622px] right-[5%] sm:right-[200px]'>
 					<BoxTransition>
-							<div className='w-full sm:w-[622px] overflow-hidden h-[390px] sm:h-auto sm:pt-[76px] pb-[45px] pt-[35px] sm:pb-[85px] px-8 sm:pl-[106px] sm:pr-[112px] bg-primary'>
+							<div className='w-full sm:w-[622px] overflow-hidden sm:h-auto sm:pt-[76px] pb-[45px] pt-[35px] sm:pb-[85px] px-8 sm:pl-[106px] sm:pr-[112px] bg-primary'>
 								<div className='text-white'>
 									<h6 className='text-[14px] tracking-[.1em] font-[500]'>EXPLORE THE FEATURES</h6>
 									<h4 className='text-[40px] sm:text-[60px] leading-[.96em] tracking-[-.02em] font-[700]'>Full project managemment</h4>

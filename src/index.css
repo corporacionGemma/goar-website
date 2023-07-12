@@ -259,7 +259,35 @@ html {
 .button-form{
   transition: .4s ease all;
 }
+/* Box Transition*/
+.containerBoxTransition{
+  transition-delay: .4s;
+}
+.initial-box{
+  transform: translateX(-102%);
+  transition: all 0s 0.5s;
+}
+.inview-box1{
+  animation: inview-active 1.5s cubic-bezier(0.86,0,0.07,1) forwards;
+  
+}
+.inview-box2{
+  animation: inview-active 1.2s .2s cubic-bezier(1,0,0.54,0.99) forwards;
+  
+}
 
+@keyframes inview-active {
+  0% {
+    transform: translateX(-102%);
+  }
+  50.2%{
+    transform: translateX(0%)
+  }
+  
+  100%{
+    transform: translateX(102%);
+  }
+}
 /*Media Queries*/
 @media screen and (max-width: 1024px) {
   .copySection{
