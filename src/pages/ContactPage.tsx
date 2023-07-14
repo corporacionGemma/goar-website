@@ -14,9 +14,9 @@ const ContactPage: React.FC = () => {
           colorDescription='text-white'
         />
       </div>
-      <div className='w-full py-[130px] flex justify-center'>
-        <div className='w-[87%] grid grid-cols-2 gap-8  justify-items-center items-center'>
-          <div className='bg-secondary-color p-5 h-full rounded'>
+      <div className='w-full py-[65px] md:py-[130px] flex justify-center'>
+        <div className='w-full px-8 sm:px-0 sm:w-[87%] grid grid-cols-1 md:grid-cols-2 gap-8  justify-items-center items-center'>
+          <div className='bg-secondary-color w-full p-5 h-full rounded'>
             <MapSection/>
           </div>
           <div className='w-full h-full mb-[40px] mt-[60px]'>

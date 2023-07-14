@@ -21,8 +21,8 @@ const ProjectPage: React.FC<Props> = ({ deviceType }) => {
         />
       </div>
       {/* Characteristic */}
-      <div className='w-full bg-secondary-color flex flex-col items-center pt-[110px] pb-[10px]'>
-				<div className='w-[85%] grid grid-cols-4 gap-3'>
+      <div className='w-full bg-secondary-color flex flex-col items-center sm:pb-[10px] pt-[110px] pb-[50px]'>
+				<div className='w-full px-8 sm:px-0 sm:w-[85%] grid grid-cols-1 justify-items-center sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-3'>
           {
             characteristicProject.map(characteristic => (
               <InfoProject
@@ -52,7 +52,7 @@ const ProjectPage: React.FC<Props> = ({ deviceType }) => {
 			</div>
       {/* values project */}
 			<div className='w-full bg-secondary-color flex py-[103px] justify-center'>
-				<div className='w-[90%] grid grid-cols-4 gap-[30px]'>
+				<div className='w-[90%] grid grid-cols-1 md:grid-cols-2 justify-items-center lg:grid-cols-4 gap-[30px]'>
 					{
 						valuesProjects.map(value => (
 							<Counter key={value.id} end={value.value} title={value.title} subtitle={value.subtitle} color='text-white'/>

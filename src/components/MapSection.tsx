@@ -11,7 +11,7 @@ const MapSection: React.FC = () => {
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className='h-full'>
+        className='md:h-full w-full lg:w-[600px] '>
         </iframe>
     </div>
   )

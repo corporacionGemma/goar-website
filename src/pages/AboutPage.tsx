@@ -24,7 +24,7 @@ const AboutPage: React.FC = () => {
 					colorText="text-secondary-text"
 					classNameDescription="descriptionComponent"
 				/>
-				<div className="w-[84%] grid grid-cols-4 gap-7 pt-[30px] pb-[62px]">
+				<div className="w-[84%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 pt-[30px] pb-[62px]">
 					{servicesList.map((service) => (
 						<BannerInfo key={service.id} title={service.title} subtitle={service.subtitle} />
 					))}
@@ -32,7 +32,7 @@ const AboutPage: React.FC = () => {
 			</div>
       {/* about company */}
 			<div className="flex justify-center">
-				<div className="w-[84%] grid grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
+				<div className="w-full px-8 sm:px-0 sm:w-[84%] grid grid-cols-1 lg:grid-cols-2 gap-6 items-center py-[40px] relative z-[5]">
 					<div className='absolute w-[74%] backgroundImg h-full right-0 top-0 -z-[1]'></div>
 					<div className='w-full h-max '>
 						<BoxTransition>
@@ -45,10 +45,10 @@ const AboutPage: React.FC = () => {
 								className='imageSection'/>
 						</BoxTransition>
 					</div>
-					<div className='px-[26px] py-10'>
+					<div className='px-0 lg:px-[26px] py-6 sm:py-10'>
 						<h6 className='text-[14px] text-secondary-text tracking-[.1em] uppercase font-[500] mb-[2px]'>EXPLORE THE FEATURES</h6>
-						<h2 className='text-[60px] text-secondary-text leading-[0.96em] tracking-[-.02em] font-[700]'>Full project management</h2>
-						<p className='font-[400] text-[18px] leading-[26px] mt-5 pr-[110px]'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur.</p>
+						<h2 className='text-[40px] sm:text-[60px] text-secondary-text leading-[0.96em] tracking-[-.02em] font-[700]'>Full project management</h2>
+						<p className='font-[400] text-[18px] leading-[26px] mt-5 pr-0 md:pr-[110px]'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur.</p>
 						<div className='mt-8'>
 							<Button type='normal-orange' label={'Read More'} styleButton='projecButton' cb={() => {}}/>
 						</div>
@@ -63,7 +63,7 @@ const AboutPage: React.FC = () => {
 					colorText="text-secondary-text"
 					classNameDescription="descriptionComponent"
 				/>
-				<div className='w-full grid grid-cols-4 px-7 pt-[40px] pb-[100px] gap-7'>
+				<div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-8 sm:px-7 pt-[40px] pb-[100px] gap-7'>
 					{
 						people.slice(0, 4).map(person => (
 							<PeopleCard
@@ -78,10 +78,10 @@ const AboutPage: React.FC = () => {
 			</div>
       {/* Partners */}
 			<div className='w-full partnerContainer flex justify-center py-[120px]'>
-				<ul className='w-[90%] grid grid-cols-4 gap-5 h-[110px]'>
+				<ul className='w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
 						{
 							partners.map(item => (
-								<li key={item.id} className='overflow-hidden'>
+								<li key={item.id} className='overflow-hidden w-full'>
 									<PartnerItem src={item.src} name={item.name} partnerRef={partnerRef} />
 								</li>
 							))

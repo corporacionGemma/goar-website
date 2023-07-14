@@ -1,51 +1,23 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 
 interface Props {
   cb: () => void
   isOpen: boolean
 }
 const MenuIcon: React.FC<Props> = ({ cb, isOpen }) => {
-  const variant1 = {
-    rest: {
-      width: '50%'
-    },
-    active: {
-      width: '100%',
-      transition: {
-        duration: 0.4,
-        ease: 'easeInOut'
-      }
-    }
-  }
-  const variant2 = {
-    rest: {
-      width: '50%'
-    },
-    active: {
-      width: 0,
-      transition: {
-        duration: 0.4,
-        ease: 'easeInOut'
-      }
-    }
-  }
   return (
-    <motion.div
-      initial="rest"
-      whileHover="active"
-      // whileTap="active"
+    <div
       className='flex justify-center items-center bg-primary lg:hidden w-[70px] h-[70px]'
       onClick={cb}
       >
       <div className='w-[18px] bg-primary flex flex-col gap-1'>
-        <motion.span variants={variant1} className='h-[2px] bg-white rounded'></motion.span>
-        <span className='h-[3px] bg-white rounded w-full'></span>
-        <div className='bg-white h-[2px]'>
-          <motion.span variants={variant2} className='h-[2px] bg-primary rounded block'></motion.span>
+        <span className={`rounded block h-[3px] transition-all duration-300 bg-white ${isOpen ? 'w-full' : 'w-[50%]'}`}></span>
+        <span className='h-[2px] bg-white rounded w-full'></span>
+        <div className='bg-white h-[3px] rounded'>
+          <span className={`transition-all duration-300 ${isOpen ? 'w-0' : 'w-[50%]'} h-[3px] bg-primary rounded block`}></span>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

@@ -29,7 +29,7 @@ html {
 }
 /*navbar*/
 .menuContainer {
-	height: 200px;
+	height: 300px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -65,10 +65,7 @@ html {
 
 .countNumber,.descriptionComponent{
     color: transparent;
-    /* -webkit-text-stroke: 1px #E8E8E9; */
     -webkit-text-stroke: 1px #dedfe0;
-    /* -webkit-text-stroke: 1px #273B72; */
-    /* text-shadow: rgb(232, 232, 233) 1px 0px 0px, rgb(232, 232, 233) 0.540302px 0.841471px 0px, rgb(232, 232, 233) -0.416147px 0.909297px 0px, rgb(232, 232, 233) -0.989992px 0.14112px 0px, rgb(232, 232, 233) -0.653644px -0.756802px 0px, rgb(232, 232, 233) 0.283662px -0.958924px 0px, rgb(232, 232, 233) 0.96017px -0.279415px 0px; */
 }
 .imageSection{
   overflow-clip-margin: content-box;
@@ -221,7 +218,7 @@ html {
 .containerAcordeon{
   transition: .4s ease all;
 }
-.button-form:hover,.activeAcordeon,.containerAcordeon:hover .containerIcon-acordeon{
+.buttonError:hover,.button-form:hover,.activeAcordeon,.containerAcordeon:hover .containerIcon-acordeon{
   background-color: #FF5E14;
   box-shadow: 1px 10px 20px -1px rgba(255,94,20,0.41);
   -webkit-box-shadow: 1px 10px 20 -1px rgba(255,94,20,0.41);
@@ -288,6 +285,25 @@ html {
     transform: translateX(102%);
   }
 }
+/* Error 404*/
+.mainError{
+  height: calc(100vh - 110px);
+  background-image: url(/assets/error404.jpg);
+  background-position: center  -100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.backErrorWord{
+  position: absolute;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  -webkit-text-stroke-color: #d2d2d4;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: transparent;
+}
 /*Media Queries*/
 @media screen and (max-width: 1024px) {
   .copySection{
@@ -295,6 +311,9 @@ html {
   }
   .imageSection{
     height: auto;
+  }
+  .mainError{
+    background-position: center  0;
   }
 }
 @media screen and (max-width: 768px) {

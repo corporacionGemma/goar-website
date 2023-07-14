@@ -10,7 +10,7 @@ interface Props {
   description: string
   id: number
 }
-const CarouselItemHome: React.FC<Props> = ({ subtitle, title, backtitle, src, description, id }) => {
+const CarouselItemHome: React.FC<Props> = ({ subtitle, title, backtitle, src, description }) => {
   const paragraph = {
     hidden: {
       opacity: 0,

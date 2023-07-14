@@ -22,7 +22,7 @@ const Team: React.FC = () => {
 					colorText="text-secondary-text"
 					classNameDescription="descriptionComponent"
 				/>
-				<div className='w-full grid grid-cols-4 px-7 pt-[40px] pb-[100px] gap-7'>
+				<div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-8 sm:px-7 pt-[40px] pb-[100px] gap-7'>
 					{
 						people.map(person => (
 							<PeopleCard

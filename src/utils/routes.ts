@@ -1,9 +1,9 @@
 const routes = {
   home: '/',
-  about: 'nosotros',
-  projects: 'proyectos',
-  contact: 'contacto',
-  team: 'equipo',
+  about: '/nosotros',
+  projects: '/proyectos',
+  contact: '/contacto',
+  team: '/equipo',
   error: '*'
 }
 

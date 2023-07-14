@@ -26,7 +26,7 @@ const App: React.FC = () => {
     const deviceType = result.device?.type || 'desktop'
     setDeviceType(deviceType)
   }, [])
-  console.log(positionMobile)
+  // console.log(positionMobile)
   return (
     <div ref={scrollRef}>
       <BrowserRouter>

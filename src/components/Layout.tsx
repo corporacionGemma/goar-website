@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Footer, Header, HeaderFix } from '.'
+import { Footer, Header } from '.'
 import { AnimatePresence } from 'framer-motion'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ position, positionMobile }) => {
   // console.log('postion:', position)
   return (
-    <div>
+    <div className=''>
       <AnimatePresence>
         {/* {position && (
           <HeaderFix/>
